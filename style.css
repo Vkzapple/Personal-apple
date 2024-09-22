@@ -13,10 +13,14 @@
     --second-bg-color: #384B70;
     --text-color:white;
     --main-color: #2596ff;
+    --green: #63e6be;
+    --blue: #74c0fc;
+    --yellow: #ffd43b;
+    --red: #ff8787;
+    --blue: #74c0fc;
+    --black-b: #183153;
     --one-rem: clamp(1rem, 1.3vw, 1.3vw);
     --two-rem: clamp(2rem, 2.6vw, 2.6vw);
-  --blue: #74c0fc;
-  --black-b: #183153;
   --eight-px: clamp(0.5rem, 0.65vw, 0.65vw);
   --one-rem: clamp(1rem, 1.3vw, 1.3vw);
   --two-rem: clamp(2rem, 2.6vw, 2.6vw);
@@ -110,7 +114,7 @@ header {
 
     & nav {
       display: flex;
-      gap: var(--one-rem);
+      gap: 25px;
       background-color: transparent;
       list-style-type: none;
       font-weight: 500;
@@ -515,7 +519,112 @@ span{
     }
 }
 
+.container-skills{
+    width: 100%;
+    height: 100vh;
+    background: var(--black-b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.skills h2{
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.progress-bar{
+    background: grey;
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar div{
+    height: 10px;;
+    border-radius: 5px;
+    width: 0%;
+}
+
+.progress-bar div span{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--black-b);
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.html{
+    background: var(--red);
+        animation: html 1s linear forwards;
+}
+
+.css{
+    background: var(--blue);
+        animation: css 1s linear forwards;
+
+}
+
+.javascript{
+    background: var(--yellow);
+        animation: javascript 1s linear forwards;
+
+}
+
+.python{
+    background: var(--green);
+        animation: python 1s linear forwards;
+
+}
+
+.html span{
+    border: 1px solid var(--red);
+}
+
+.css span{
+    border: 1px solid var(--blue);
+}
+
+.javascript span{
+    border: 1px solid var(--yellow);
+}
+
+.python span{
+    border: 1px solid var(--green);
+}
+
+@keyframes html{
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes css{
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes javascript{
+    100%{
+        width: 20%;
+    }
+}
+
+@keyframes python{
+    100%{
+        width: 50%;
+    }
+}
     footer {
     font-family: Arial, sans-serif;
       background-color: #1a237e; 
@@ -526,7 +635,7 @@ span{
       background-color: var(--black-b);
     }
 
-    footer .container {
+    footer .container-footer {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
