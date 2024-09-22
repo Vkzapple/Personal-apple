@@ -693,3 +693,16 @@ span{
     footer .web-icon {
       margin-right: 8px;
     }
+
+
+@media only screen and (max-width: 768px) {
+    .home, .about, .experience, .skill, .container-footer {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .home, .about, .experience, .skill, .container-footer {
+        margin-bottom: 5px;
+    }
+}
