@@ -89,6 +89,7 @@ header {
   top: 0;
   color: white;
   width: 100%;
+  margin-top: 25px;
 
   & main {
     display: flex;
@@ -102,14 +103,6 @@ header {
     -o-transition: 500ms;
     & h4 {
       font-size: var(--one-rem);
-    }
-
-    & label {
-      display: none;
-    }
-
-    & input {
-      display: none;
     }
 
     & nav {
@@ -136,30 +129,20 @@ header {
       & nav {
         display: none;
       }
-
-      & input:checked ~ nav {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--second-bg-color);
-        position: absolute;
-        top: 5rem;
-        right: 2rem;
-        padding: var(--eight-px);
-        border-radius: var(--one-rem);
-        -webkit-border-radius: var(--one-rem);
-        -moz-border-radius: var(--one-rem);
-        -ms-border-radius: var(--one-rem);
-        -o-border-radius: var(--one-rem);
-        transition: 500ms;
-        -webkit-transition: 500ms;
-        -moz-transition: 500ms;
-        -ms-transition: 500ms;
-        -o-transition: 500ms;
       }
     }
-  }
 
+    .refresh {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      cursor: pointer;
+    }
 
+    .refresh:hover {
+      color: #ccc;
+    }
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
@@ -210,28 +193,6 @@ span{
     font-size: 1.8rem;
     font-weight: 500;
 }
-.social-icons a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: black;
-    border: 0.2rem solid #ffffff;
-    font-size: 2rem;
-    border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease;
-    color: #ffffff;
-}
-
-.social-icons a:hover{
-    color: rgb(185, 163, 163);
-    transform: scale(1.3) translateY(-5px);
-    background-color: #ffffff;
-    box-shadow: 0  0 25px #b74b4b;
-}
-
 
 .typing-text{
     font-size: 34px;
@@ -565,24 +526,24 @@ span{
 }
 .html{
     background: var(--red);
-        animation: html 1s linear forwards;
+        animation: html 2s linear forwards;
 }
 
 .css{
     background: var(--blue);
-        animation: css 1s linear forwards;
+        animation: css 2s linear forwards;
 
 }
 
 .javascript{
     background: var(--yellow);
-        animation: javascript 1s linear forwards;
+        animation: javascript 3s linear forwards;
 
 }
 
 .python{
     background: var(--green);
-        animation: python 1s linear forwards;
+        animation: python 3s linear forwards;
 
 }
 
@@ -632,7 +593,7 @@ span{
       margin: 0;
       padding: 20px;
       text-align: center;
-      background-color: var(--blue);
+      background-color: var(--second-bg-color);
     }
 
     footer .container-footer {
