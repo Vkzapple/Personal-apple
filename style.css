@@ -593,7 +593,12 @@ span{
       margin: 0;
       padding: 20px;
       text-align: center;
+<<<<<<< HEAD
       background-color: var(--second-bg-color);
+=======
+      background-color: #2596ff;
+;
+>>>>>>> 653b3895822e87243baf24745630fef91d39f303
     }
 
     footer .container-footer {
