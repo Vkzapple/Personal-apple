@@ -632,7 +632,8 @@ span{
       margin: 0;
       padding: 20px;
       text-align: center;
-      background-color: var(--blue);
+      background-color: #2596ff;
+;
     }
 
     footer .container-footer {
