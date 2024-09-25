@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -14,12 +16,14 @@
     --second-bg-color: #384B70;
     --text-color:white;
     --main-color: #2596ff;
+    --white: rgb(255, 226, 226);
     --green: #63e6be;
     --blue: #74c0fc;
     --yellow: #ffd43b;
     --red: #ff8787;
     --blue: #74c0fc;
     --black-b: #183153;
+    --black: rgb(30, 30, 30);
     --one-rem: clamp(1rem, 1.3vw, 1.3vw);
     --two-rem: clamp(2rem, 2.6vw, 2.6vw);
     --eight-px: clamp(0.5rem, 0.65vw, 0.65vw);
@@ -231,11 +235,12 @@ span{
     }
 }
 
-/* @keyframes cursor{
+@keyframes cursor{
     to{
         border-left: 3px solid #397bb9;
+        animation: blink 1s linear infinite;
     }
-} */
+}
 
 @keyframes words{
     0%, 20%{
@@ -596,6 +601,89 @@ span{
         width: 50%;
     }
 }
+
+.container-img{
+    background-color: #000000;
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-list .card-item .card-link{
+    width: 400px;
+    display: block;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 30px 30px var(--black);
+    border: 2px solid transparent;
+    transition: 0.2s ease;
+}
+.card-list .card-item .card-link:hover{
+    border-color: var(--black-b);
+    box-shadow: 15px 15px var(--red);
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-list .card-link .badge{
+    color: var(--white);
+    padding: 8px 16px;
+    font-size: var(--two-rem) ;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: var(--black-b);
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .badge.epel1{
+    color: var(--text-color);
+    background-color: var(--red);
+}
+
+.card-list .card-link .badge.spider{
+    color: var(--text-color);
+    background-color: var(--blue);
+}
+
+.card-list .card-link .badge.epel2{
+    color: var(--text-color);
+    background-color: var(--yellow);
+}
+
+.card-list .card-link .card-title{
+    font-size: var(--one-rem);
+    color: #000000;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    border: 2px solid var(--black);
+    color: var(--black);
+    background: none;
+    cursor: pointer;
+    border: 2px solid var(--black-b);
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button{
+color: var(--white);
+background: var(--black-b);
+
+}
+
     footer {
     font-family: Arial, sans-serif;
       background-color: #1a237e; 
@@ -603,7 +691,7 @@ span{
       margin: 0;
       padding: 20px;
       text-align: center;
-      background-color: var(--sec);
+      background-color: var(--second-bg-color);
     }
 
     footer .container-footer {
