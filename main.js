@@ -30,6 +30,6 @@ new Swiper('.card-wrapped', {
     1024: {
       slidesPerView: 3
     }
-  }
+  },
 
 });
